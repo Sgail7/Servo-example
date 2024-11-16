@@ -3,7 +3,7 @@
 
 const int motor_pin = 3;
 
-#define MAX_ANGLE 270
+#define MAX_ANGLE 180
 #define MIN_ANGLE 0
 #define MAX_MS 2500
 #define MIN_MS 500
@@ -65,7 +65,7 @@ void loop() {
 #ifdef DYNAMIC_INPUT
 
 int angle = 0;
-int step_size = 10;
+int step_size = 1;
 
 void loop() {
   // Check if any data is available
