@@ -48,6 +48,11 @@ void setup() {
   // #endif
 }
 
+void loop() {
+  // put your main code here, to run repeatedly:
+  // Serial.println("Hello world");
+}
+
 // #ifdef STATIC_INPUT
 
 // void loop() {
