@@ -8,8 +8,8 @@ const int motor_pin = 3;
 #define MAX_MS 2500
 #define MIN_MS 500
 
-#define STATIC_INPUT
-// #define DYNAMIC_INPUT
+// #define STATIC_INPUT
+#define DYNAMIC_INPUT
 
 Servo servo_1; // Create a servo object
 String userInput = ""; // String to store user input that is part of the String class
