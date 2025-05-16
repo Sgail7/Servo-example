@@ -51,7 +51,7 @@ void setup() {
 void loop() {
   int angle = 0 ;
   float us_amount = map(angle, MIN_ANGLE, MAX_ANGLE, MIN_MS, MAX_MS);
-  servo_0.writeMicroseconds(us_amount);
+  servo_1.writeMicroseconds(us_amount);
   delay(50);
   angle += 1;
   if (angle > MAX_ANGLE) {
