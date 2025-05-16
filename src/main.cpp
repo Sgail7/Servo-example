@@ -29,7 +29,7 @@ void setup() {
   servo_3.attach(BL_pin);
 
   // Hardcoded angle for now
-  angle = 90;
+  angle = 95;
 
   // Map the angle to microseconds
   float us_amount = map(angle, MIN_ANGLE, MAX_ANGLE, MIN_MS, MAX_MS);
