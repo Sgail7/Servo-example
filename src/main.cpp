@@ -52,7 +52,7 @@ void loop() {
   int angle = 0 ;
   float us_amount = map(angle, MIN_ANGLE, MAX_ANGLE, MIN_MS, MAX_MS);
   servo_2.writeMicroseconds(us_amount);
-  delay(50);
+  delay(500);
   angle += 1;
   if (angle > MAX_ANGLE) {
     angle = MIN_ANGLE;
