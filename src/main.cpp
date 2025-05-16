@@ -10,7 +10,8 @@ const int FR_pin = 3;
 const int FL_pin = 5;
 const int BR_pin = 6;
 const int BL_pin = 9;
-int angle = 0; // Initialize angle to 0
+int angle = 0;
+
 // #define STATIC_INPUT
 // #define DYNAMIC_INPUT
 
@@ -36,7 +37,7 @@ void setup() {
   servo_1.writeMicroseconds(us_amount);
   servo_2.writeMicroseconds(us_amount);
   servo_3.writeMicroseconds(us_amount);
-  angle = 0;
+  // angle = 0;
 
   // Serial.begin(9600);
 
@@ -50,13 +51,14 @@ void setup() {
 }
 
 void loop() {
-  float us_amount = map(angle, MIN_ANGLE, MAX_ANGLE, MIN_MS, MAX_MS);
-  servo_3.writeMicroseconds(us_amount);
-  delay(20);
-  angle += 1;
-  if (angle > MAX_ANGLE) {
-    angle = MIN_ANGLE;
-  }
+  // Some test code to check the servos
+  // float us_amount = map(angle, MIN_ANGLE, MAX_ANGLE, MIN_MS, MAX_MS);
+  // servo_3.writeMicroseconds(us_amount);
+  // delay(20);
+  // angle += 1;
+  // if (angle > MAX_ANGLE) {
+  //   angle = MIN_ANGLE;
+  // }
 
   // put your main code here, to run repeatedly:
   // Serial.println("Hello world");
