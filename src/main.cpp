@@ -28,7 +28,7 @@ void setup() {
   servo_3.attach(BL_pin);
 
   // Hardcoded angle for now
-  int angle = 90;
+  angle = 90;
 
   // Map the angle to microseconds
   float us_amount = map(angle, MIN_ANGLE, MAX_ANGLE, MIN_MS, MAX_MS);
@@ -36,8 +36,8 @@ void setup() {
   servo_1.writeMicroseconds(us_amount);
   servo_2.writeMicroseconds(us_amount);
   servo_3.writeMicroseconds(us_amount);
-  int angle = 0;
-  
+  angle = 0;
+
   // Serial.begin(9600);
 
   // #ifdef STATIC_INPUT
