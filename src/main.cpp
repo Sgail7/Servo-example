@@ -11,6 +11,7 @@ const int FL_pin = 5;
 const int BR_pin = 6;
 const int BL_pin = 9;
 int angle = 0;
+float neg_angle = 0;
 
 // #define STATIC_INPUT
 // #define DYNAMIC_INPUT
@@ -29,14 +30,17 @@ void setup() {
   servo_3.attach(BL_pin);
 
   // Hardcoded angle for now
-  angle = 95;
+  angle = 138.4;
+  neg_angle = 41.6;
 
   // Map the angle to microseconds
-  float us_amount = map(angle, MIN_ANGLE, MAX_ANGLE, MIN_MS, MAX_MS);
-  servo_0.writeMicroseconds(us_amount);
-  servo_1.writeMicroseconds(us_amount);
-  servo_2.writeMicroseconds(us_amount);
-  servo_3.writeMicroseconds(us_amount);
+  float us_pos = map(angle, MIN_ANGLE, MAX_ANGLE, MIN_MS, MAX_MS);
+  float us_neg = map(neg_angle, MIN_ANGLE, MAX_ANGLE, MIN_MS, MAX_MS);
+
+  servo_0.writeMicroseconds(us_neg);
+  servo_1.writeMicroseconds(us_pos);
+  servo_2.writeMicroseconds(us_neg);
+  servo_3.writeMicroseconds(us_pos);
   // angle = 0;
 
   // Serial.begin(9600);
